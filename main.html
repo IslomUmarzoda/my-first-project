@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+
+    <div class="first-part">
+
+        <div class="logo">
+            <div>
+                <img src="logo.jpg" alt="" class="logotip">
+                <img src="logo-text.png" alt="" class="logo-text">
+            </div>
+            <p>Твоя мечта - наше мастерство</p>
+        </div>
+
+        <div class="pages">
+            <button id="menu-toggle">menu</button>
+            <a href="" class="show">Главная</a>
+            <a href="" class="show">О мастере</a>
+            <a href="" class="show">Каталог</a>
+            <a href="" class="show">Блог</a>
+            <a href="" class="show">Контакты</a>
+            <a href="" class="show">Вход</a>
+
+        </div>
+
+
+    </div>
+
+    
+    <h1 id="rotating-text"></h1>
+    <div id="effect"></div>
+    <button class="learn-more">Подробнее</button>
+    <div class="box2">
+        <p id="rotating-topic"></p>
+    </div>
+    <div class="carousel-container">
+        <img src="right-hend.png" alt="" class="right-hend">
+        <img src="left-hend.png" alt="" class="left-hend">
+        <div class="carousel">
+            <div class="carousel-item">
+                <img src="guitar-1.webp" alt="Image 1">
+            </div>
+            <div class="carousel-item">
+                <img src="guitar-2.webp" alt="Image 2">
+            </div>
+            <div class="carousel-item">
+                <img src="guitar-5.webp" alt="Image 3">
+            </div>
+            <div class="carousel-item">
+                <img src="guitar-4.webp" alt="Image 4">
+            </div>
+            <div class="carousel-item">
+                <img src="guitar-3.webp" alt="Image 5">
+            </div>
+        </div>
+
+        <div class="carousel-nav">
+            <button id="prev" class="button-left"><img src="carousel-button.jpg" alt=""></button> 
+            <button id="next" class="button-right"><img src="carousel-button.jpg" alt=""></button>   
+        </div>
+    </div>
+    <div class="news">
+        <h1>Новости <img src="news-icons.png" alt=""></h1>
+
+
+        <hr>
+        <div class="news-all">
+            <div class="date">
+                <h1>10</h1><br>
+                <p>май</p>
+            </div>
+            <h3>Жду всех в гости!
+                <p>Витрина студии перешла <br>
+                    рубеж в сто гитар. 90 из <br>
+                    100 доведени
+                </p>
+            </h3>
+
+        </div>
+    </div>
+    <div class="box3">
+        <h1 class="because">Почему мы? <img src="answer-icons.png" alt=""></h1>
+        <div class="images">
+
+            <div>
+                <img src="image1.png" alt="">
+                <h2>Гитары, которые помнят руки мастера</h2>
+                <p>Мы не штампуем инструменты — мы <br>
+                    создаём их вручную, с учетом <br>
+                    анатомии музыканта и егостиля. <br>
+                    Ваша гитара будет звучать так, как<br>
+                    задумали именно вы..</p>
+            </div>
+            <div>
+                <img src="image2.png" alt="">
+                <h2>Ваша гитара ждёт вас… пока безымянная</h2>
+                <p>Она уже «рождается» в эскизах: где-то <br>
+                    это будет лаконичный black metal-монстр, <br>
+                    а где-то — резная акустика для баллад. <br>
+                    Расскажите нам о своей музыке — и мы <br>
+                    дадим инструменту имя, характер и голос.</p>
+            </div>
+            <div>
+                <img src="image3.png" alt="">
+                <h2>Дерево + страсть = легендарный звук</h2>
+                <p>Отборная ель, красное дерево, <br>
+                    клён — только лучшие породы. Но <br>
+                    главный секрет — наша одержимость <br>
+                    идеальным тембром.Проверьте <br>
+                    наstage или в студии: разница <br>
+                    с фабричнымигитарами — как <br>
+                    между mp3 и винилом.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="over-all">
+        <div class="logo-end">
+            <img src="logo.jpg" alt="" class="logotip2">
+            <img src="logo-text.png" alt="" class="logo2-text">
+        </div>
+
+        <p class="address-p">г. Москва, Ленинский проспект... </p>
+        <button class="address-button">+7 (965) 128-55-62 </button>
+        <button class="e-mail-button">sopwith@mail.ru</button>
+        <div class="follow">
+            <input type="text" placeholder="Для подписки на новости введите адрес почты...">
+            <button>Подписаться</button>
+        </div>
+        <p class="designed-by">Copyright 2025 Sopwith Guitars. Designed by k-m. Все права защищены</p>
+
+
+
+    </div>
+
+    <script src="./main.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS('effect', {
+            "particles": {
+                "number": { "value": 400 },
+                "color": { "value": ["#dbdf10", "#f8270b", "#ff9900"] },
+                "shape": { "type": "circle" },
+                "opacity": { "value": 1 },
+                "size": { "value": 4, "random": true },
+                "line_linked": { "enable": false },
+                "move": {
+                    "enable": true,
+                    "speed": 7,
+                    "direction": "right",
+                    "straight": false,
+                    "out_mode": "out"
+                }
+            }
+        });
+
+    </script>
+</body>
+
+</html>
