@@ -1,22 +1,26 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     background-color: grey;
-    background-image: url("background-image-1.webp");
     background-repeat: no-repeat;
     background-position: top;
-    background-size: 100% auto;
+    background-size: cover;
+    background-attachment: scroll;
+
 }
-.first-part{  
+
+.first-part {
     width: 100%;
     display: flex;
     gap: 16%;
     height: 20%;
     background: none
 }
-.logo{
+
+.logo {
     margin-left: 5%;
     margin-top: 2%;
     margin-bottom: 2%;
@@ -26,7 +30,8 @@ body{
     width: 30%;
     height: 10vh;
 }
-.logo div{
+
+.logo div {
     box-shadow: 0px 0px 15px 2px white;
     border-top-left-radius: 40px;
     border-bottom-right-radius: 40px;
@@ -34,25 +39,29 @@ body{
     width: 100%;
     align-items: center
 }
-.logo div .logotip{
+
+.logo div .logotip {
     border-top-left-radius: 40px;
     border-right: 3px solid white;
     width: 23%;
     height: 23%;
 }
-.logo div .logo-text{
+
+.logo div .logo-text {
     box-shadow: 0px 0px 15px 2px white;
     border-bottom-right-radius: 40px;
     height: 100%;
     width: 90%
 }
-.logo p{
+
+.logo p {
     margin-top: 2%;
     font-size: 22px;
     z-index: 10;
     color: white
 }
-.pages{
+
+.pages {
     display: inline-block;
     height: 10vh;
     width: 70%;
@@ -62,7 +71,8 @@ body{
     margin-top: 2%;
     align-items: center
 }
-.pages a{
+
+.pages a {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     display: flex;
     justify-content: center;
@@ -70,17 +80,21 @@ body{
     border-radius: 30px;
     color: white;
     font-size: 23px;
-    transition: 300ms
+    transition: transform .2s ease;
 }
-.pages a:hover{
+
+.pages a:hover {
     transform: rotate(5deg);
     color: orange;
 }
-.pages a:active{
+
+.pages a:active {
     color: black
-}   
+}
+
 #menu-toggle {
-    display: none; /* дар аввали пинҳон */
+    display: none;
+    /* дар аввали пинҳон */
     color: white;
     background: none;
     border: none;
@@ -89,11 +103,13 @@ body{
     cursor: pointer;
     font-size: 20px;
 }
+
 #menu-toggle:hover {
     border-left: 3px solid white;
     border: 1px solid white
 }
-#rotating-text{
+
+#rotating-text {
     margin-top: 8%;
     display: flex;
     background-color: #f09815;
@@ -104,9 +120,10 @@ body{
     justify-content: center;
     opacity: 1;
     transition: opacity 0.5s ease;
-    box-shadow: 0px 0px 50px 20px #f09815;
+    box-shadow: 0 0 20px rgba(240, 152, 21, .6);
 }
-#effect{
+
+#effect {
     position: absolute;
     width: 70%;
     margin-left: 20vw;
@@ -116,8 +133,9 @@ body{
     background: none;
     opacity: 0.7;
 }
-.learn-more{
-    transition: 300ms;
+
+.learn-more {
+    transition: transform .2s ease;
     cursor: pointer;
     margin-top: 36%;
     margin-bottom: 16%;
@@ -133,10 +151,12 @@ body{
     align-items: center;
     justify-content: center
 }
-.learn-more:hover{
+
+.learn-more:hover {
     background-color: darkmagenta
 }
-.box2{
+
+.box2 {
     height: 50vw;
     display: flex;
     align-items: center;
@@ -146,7 +166,8 @@ body{
     background-repeat: no-repeat;
     background-position: top
 }
-#rotating-topic{
+
+#rotating-topic {
     opacity: 1;
     transition: opacity 0.5s ease;
     margin-left: 5%;
@@ -155,6 +176,7 @@ body{
     font-family: monospace;
     color: white
 }
+
 .carousel-container {
     background-image: url(carousel-img.png);
     background-size: 100%;
@@ -165,7 +187,8 @@ body{
     height: 96vw;
     margin: 0 auto;
 }
-.right-hend{
+
+.right-hend {
     position: absolute;
     z-index: 3;
     width: 33%;
@@ -174,7 +197,8 @@ body{
     margin-left: 21%;
     transform: rotate(40deg)
 }
-.left-hend{
+
+.left-hend {
     position: absolute;
     z-index: 3;
     width: 22%;
@@ -183,6 +207,7 @@ body{
     margin-left: 52%;
     transform: rotate(0deg)
 }
+
 .carousel {
     padding-top: 45%;
     margin-bottom: 10%;
@@ -193,47 +218,56 @@ body{
     width: 100%;
     perspective: 1000px;
 }
+
 .carousel-item {
     position: absolute;
     width: 50%;
     margin-left: 12%;
-    transition: all 0.5s ease;
+    will-change: transform;
+    transition: transform 0.4s ease, opacity 0.3s ease;
     transform-style: preserve-3d;
     cursor: pointer;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     overflow: hidden;
 }
+
 .carousel-item img {
     width: 100%;
     height: 100%;
     background: none;
     object-fit: cover;
 }
+
 .carousel-item:nth-child(1) {
     transform: translateX(-50%) scale(0.8);
     z-index: 1;
     opacity: 0.8;
-}   
+}
+
 .carousel-item:nth-child(2) {
     transform: translateX(-50%) scale(0.7);
     z-index: 2;
     opacity: 0.9;
 }
+
 .carousel-item:nth-child(3) {
     transform: translateX(10%) scale(1.2);
     z-index: 3;
 }
+
 .carousel-item:nth-child(4) {
     transform: translateX(30%) scale(0.9);
     z-index: 2;
     opacity: 0.9;
 }
+
 .carousel-item:nth-child(5) {
     transform: translateX(40%) scale(0.8);
     z-index: 1;
     opacity: 0.8;
 }
+
 .carousel-nav {
     display: flex;
     background: none;
@@ -251,52 +285,62 @@ body{
     cursor: pointer;
     border-radius: 4px;
 }
-.carousel-nav .button-left img{
+
+.carousel-nav .button-left img {
     width: 100%;
     transition: 200ms;
     transform: rotate(-90deg);
     height: 100%
 }
-.carousel-nav .button-right img{
+
+.carousel-nav .button-right img {
     width: 100%;
     transform: rotate(90deg);
     height: 100%
 }
+
 .carousel-nav button:hover {
     background: orange;
 }
-.news{
+
+.news {
     background-color: rgb(43, 44, 44);
     width: 100%;
     height: auto;
 }
-.news h1{
+
+.news h1 {
     margin-bottom: 5%;
     margin-left: 10%;
     padding-top: 10%;
     font-size: 40px;
     color: white
 }
-.news h1 img{
+
+.news h1 img {
     width: 4%;
     border-radius: 20px;
     margin-top: 5px;
     height: 4%;
 }
-.news-all{
+
+.news-all {
     display: flex;
     padding-bottom: 5%
 }
-.news-all h3{
+
+.news-all h3 {
     color: white;
     margin-left: 2%;
     margin-top: 5%
 }
-.news-all p{
+
+.news-all p {
     margin-top: 6%;
     color: lightgray
 }
-.date{
+
+.date {
     margin-top: 5%;
     margin-left: 10%;
     flex-wrap: wrap;
@@ -309,21 +353,25 @@ body{
     width: 6%;
     height: 3%;
 }
-.date h1{
+
+.date h1 {
     margin-left: 20%;
 }
-.date p{
+
+.date p {
     color: white;
     font-size: 22px;
     margin-top: -4%;
     margin-left: 20%;
 }
-.box3{
+
+.box3 {
     background-image: url(background-image-3.jpg);
     background-repeat: repeat;
     background-size: 100%;
 }
-.images{
+
+.images {
     gap: 2%;
     display: flex;
     justify-content: space-between;
@@ -334,10 +382,12 @@ body{
     margin: 0 auto;
     padding-bottom: 8%
 }
+
 .images div {
     flex: 1;
     max-width: 35%;
 }
+
 .images img {
     border-radius: 30px;
     width: 100%;
@@ -346,7 +396,8 @@ body{
     height: auto;
     display: block;
 }
-.images div h2{
+
+.images div h2 {
     color: white;
     font-size: 17px;
     background-color: black;
@@ -358,7 +409,8 @@ body{
     justify-content: center;
     text-align: center;
 }
-.images div p{
+
+.images div p {
     padding-top: 0%;
     padding-bottom: 2%;
     box-shadow: 0px 0px 10px 4px white;
@@ -370,7 +422,8 @@ body{
     background-color: black;
     color: rgb(248, 153, 29)
 }
-.because{
+
+.because {
     margin-left: 10%;
     display: block;
     font-size: 35px;
@@ -378,14 +431,16 @@ body{
     padding-top: 2%;
     padding-bottom: 2%
 }
-.because img{
+
+.because img {
     width: 10%;
     border: 2px solid white;
     border-radius: 20px;
     margin-left: 5%;
     height: 10%;
 }
-.logo-end{
+
+.logo-end {
     margin: 0 auto;
     display: flex;
     margin-bottom: 3%;
@@ -394,26 +449,30 @@ body{
     border-top-left-radius: 40px;
     border-bottom-right-radius: 40px;
 }
-.logo-end .logo2-text{
+
+.logo-end .logo2-text {
     box-shadow: 0px 0px 15px 10px black;
     border-bottom-right-radius: 40px;
     height: 100%;
     width: 100%
 }
-.logo-end .logotip2{
+
+.logo-end .logotip2 {
     z-index: 4;
     border-top-left-radius: 40px;
     border-right: 3px solid white;
     width: 23%;
     height: 23%;
 }
-.over-all{
+
+.over-all {
     padding-top: 7%;
     width: 100%;
     padding-bottom: 1%;
     text-align: center
 }
-.address-p{
+
+.address-p {
     display: flex;
     box-shadow: 0px 0px 30px 20px black;
     justify-content: center;
@@ -426,7 +485,8 @@ body{
     margin: 0 auto;
     margin-bottom: 1%;
 }
-.address-button{
+
+.address-button {
     box-shadow: 0px 0px 20px 30px black;
     background-color: black;
     color: white;
@@ -435,7 +495,8 @@ body{
     font-size: 20px;
     margin: 0 auto
 }
-.e-mail-button{
+
+.e-mail-button {
     box-shadow: 0px 0px 20px 30px black;
     padding-top: 1%;
     margin-top: 6%;
@@ -447,6 +508,7 @@ body{
     display: block;
     margin: 0 auto
 }
+
 .follow {
     box-shadow: 0px 0px 30px 30px black;
     background: none;
@@ -458,7 +520,8 @@ body{
     border-bottom-left-radius: 30px;
     height: auto;
 }
-.follow input{
+
+.follow input {
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
     font-size: 20px;
@@ -466,18 +529,21 @@ body{
     height: 10vh;
     width: 90%
 }
-.follow button{
-    transition: 300ms;
+
+.follow button {
+    transition: transform .2s ease;
     cursor: pointer;
     width: 25%;
     border: none;
     font-size: 20px;
     background-color: orangered
 }
-.follow button:hover{
+
+.follow button:hover {
     background-color: coral
 }
-.designed-by{
+
+.designed-by {
     margin-top: 10%;
     width: 70%;
     margin-left: 15%;
@@ -492,157 +558,199 @@ body{
     box-shadow: 0px 0px 30px 30px black;
     margin-bottom: 6%
 }
+
 @media (min-width: 1200px) {
     .first-part {
         gap: 6%;
     }
+
     .logo {
         margin-left: 2%;
         width: 25%;
     }
+
     .pages a {
         font-size: 25px;
     }
+
     #rotating-text {
         font-size: 70px;
     }
-    .logo-end .logotip2{
+
+    .logo-end .logotip2 {
         height: auto;
     }
-} 
+}
+
 @media (min-width: 992px) and (max-width: 1199px) {
     .first-part {
         gap: 6%;
     }
+
     .logo {
         width: 30%;
     }
-    .pages{
+
+    .pages {
         gap: 4%;
         width: 65%;
     }
+
     .pages a {
         margin-left: 1%;
         font-size: 20px;
     }
+
     #rotating-text {
         font-size: 50px;
     }
-    #effect{
+
+    #effect {
         height: 35%;
     }
-    .learn-more{
+
+    .learn-more {
         font-size: 18px
     }
-    #rotating-topic{
+
+    #rotating-topic {
         font-size: 22px
     }
-    .logo-end .logotip2{
+
+    .logo-end .logotip2 {
         height: auto;
     }
-    .address-p{
+
+    .address-p {
         width: 45%;
         font-size: 24px
     }
-    .address-button{
+
+    .address-button {
         box-shadow: 0px 0px 10px 10px black
     }
-    .follow input{
+
+    .follow input {
         height: 8vh;
     }
 }
+
 @media (min-width: 769px) and (max-width: 991px) {
     .first-part {
         gap: 5%;
     }
+
     .logo {
         width: 28%;
         margin-left: 3%;
     }
+
     .logo p {
         font-size: 16px;
     }
+
     .pages {
         gap: 3%;
         margin-left: 0%;
         width: 65%;
     }
+
     .pages a {
         font-size: 16px;
         margin-left: 2%;
     }
+
     #rotating-text {
         font-size: 50px;
     }
-    #effect{
+
+    #effect {
         height: 30%;
     }
+
     .learn-more {
         width: 18%;
         font-size: 20px;
     }
+
     #rotating-topic {
         font-size: 20px;
     }
+
     .news h1 {
         font-size: 30px;
     }
-    .box3{
+
+    .box3 {
         background-repeat: repeat
     }
+
     .because {
         font-size: 25px;
     }
+
     .images div h2 {
         font-size: 13px;
     }
+
     .images div p {
         font-size: 18px;
     }
-    .logo-end .logotip2{
+
+    .logo-end .logotip2 {
         border-top-left-radius: 15px;
         height: auto;
     }
-    .address-p{
+
+    .address-p {
         width: 70%
     }
-    .address-button{
+
+    .address-button {
         box-shadow: 0px 0px 20px 10px black;
     }
 }
+
 @media (min-width: 481px) and (max-width: 768px) {
     .first-part {
         display: flex;
         gap: 0%
     }
+
     .logo {
         padding-left: 10%;
         width: 60%;
         margin: 2% auto;
     }
+
     .logo p {
         box-shadow: 0px 0px 10px 10px black;
         width: 100%;
         background-color: black;
         font-size: 15px;
     }
-    .logo div{
+
+    .logo div {
         width: 100%
     }
-    .logo div .logotip{
+
+    .logo div .logotip {
         border-top-left-radius: 30px
     }
+
     .pages {
         position: relative;
         flex-direction: column;
         align-items: flex-end;
     }
+
     #menu-toggle {
         font-size: 24px;
         margin-right: 13%;
         margin-top: 3%;
         display: block;
     }
+
     .pages a {
         display: none;
         background-color: chocolate;
@@ -654,94 +762,116 @@ body{
         border-left: 2px solid white;
         width: 55%;
         z-index: 100;
-        box-shadow: 0 0 10px 10px rgba(0,0,0,0.3);
+        box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.3);
     }
-    .pages a:hover{
+
+    .pages a:hover {
         color: white
     }
+
     .pages a.show {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
     }
+
     #rotating-text {
         display: block;
         font-size: 25px;
     }
-    #effect{
+
+    #effect {
         margin-top: 5%;
         height: 25%;
     }
+
     .learn-more {
         width: 30%;
         margin-bottom: 8%;
         font-size: 16px;
     }
+
     #rotating-topic {
         font-size: 17px;
     }
-    .news h1 img{
+
+    .news h1 img {
         width: 7%;
         height: 7%;
     }
-    .date{
+
+    .date {
         width: 15%
     }
-    .news-all h3{
+
+    .news-all h3 {
         margin-left: 10%
     }
-    .box3{
+
+    .box3 {
         background-repeat: repeat
     }
+
     .because {
         font-size: 30px
     }
+
     .images {
         width: 100%;
         flex-direction: column;
     }
+
     .images div {
         width: 100%;
         max-width: 80%;
         margin: 2% auto;
     }
-    .images img{
+
+    .images img {
         width: 60%;
         margin: 0 auto;
     }
-    .images div h2{
+
+    .images div h2 {
         width: 100%;
         font-size: 20px
     }
-    .images div p{
+
+    .images div p {
         width: 100%;
         margin-top: 3%;
         font-size: 20px
     }
-    .logo-end{
+
+    .logo-end {
         border-top-left-radius: 15px;
         width: 38%
     }
-    .logo-end .logotip2{
+
+    .logo-end .logotip2 {
         border-top-left-radius: 15px;
         height: auto;
     }
-    .address-p{
+
+    .address-p {
         box-shadow: 0px 0px 10px 10px black;
         width: 70%
     }
-    .address-button{
+
+    .address-button {
         box-shadow: 0px 0px 10px 10px black
     }
-    .follow{
+
+    .follow {
         background: none;
         flex-wrap: wrap;
         box-shadow: none;
         margin-left: 5%;
         width: 90%
     }
-    .follow input{
+
+    .follow input {
         width: 100%;
         box-shadow: 0px 0px 10px 10px black;
         border-radius: 20px;
@@ -749,7 +879,8 @@ body{
         padding-left: 3%;
         height: 6vh
     }
-    .follow button{
+
+    .follow button {
         margin-left: 70%;
         margin-top: 2%;
         border-radius: 10px;
@@ -757,20 +888,24 @@ body{
         height: 5vh;
         font-size: 15px
     }
-    .designed-by{
+
+    .designed-by {
         margin-left: 5%;
         width: 90%
     }
 }
+
 @media (max-width: 480px) {
     .first-part {
         display: flex;
         gap: 0%;
     }
+
     .logo {
         width: 100%;
         margin: 2% auto;
     }
+
     .logo p {
         margin-left: 10%;
         font-size: 14px;
@@ -778,41 +913,49 @@ body{
         background-color: black;
         box-shadow: 0px 0px 10px 10px black
     }
+
     .logo div {
         margin-left: 10%;
         border-top-left-radius: 20px;
         width: 80%;
     }
-    .logo div .logotip{
+
+    .logo div .logotip {
         width: 23%;
         height: auto;
         border-top-left-radius: 20px
     }
-    .logo div .logo-text{
+
+    .logo div .logo-text {
         width: 100%
     }
+
     .pages {
         position: relative;
         flex-direction: column;
         align-items: flex-end;
     }
+
     #menu-toggle {
         font-size: 20px;
         margin-top: 5%;
         margin-right: 5%;
         display: block;
     }
-    #rotating-text{
+
+    #rotating-text {
         display: flex;
         margin-top: 10%;
         align-items: center;
         justify-content: flex-start;
         padding-left: 10%
     }
-    #effect{
+
+    #effect {
         margin-top: 3%;
         height: 20%;
     }
+
     .pages a {
         display: none;
         background-color: chocolate;
@@ -824,21 +967,25 @@ body{
         border-left: 2px solid white;
         width: 55%;
         z-index: 100;
-        box-shadow: 0 0 10px 10px rgba(0,0,0,0.3);
+        box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.3);
     }
-    .pages a:hover{
+
+    .pages a:hover {
         color: white
     }
+
     .pages a.show {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
     }
+
     #rotating-text {
         font-size: 18px;
         margin: 5%;
     }
+
     .learn-more {
         width: 35%;
         font-size: 14px;
@@ -846,93 +993,117 @@ body{
         margin-left: 30%;
         height: 5vh;
     }
-    .box2{
+
+    .box2 {
         height: 60vw;
     }
+
     #rotating-topic {
         font-size: 15px;
     }
-    .carousel-container{
+
+    .carousel-container {
         height: 95vw;
     }
-    .carousel-nav{
+
+    .carousel-nav {
         margin-top: 11.5%;
         height: 8%;
     }
+
     .carousel-nav button {
         padding: 5px 18px;
         margin: 0 30%;
     }
+
     .news h1 {
         font-size: 26px;
     }
-    .news h1 img{
+
+    .news h1 img {
         width: 8%;
         height: 8%;
     }
+
     .date {
         flex-wrap: wrap;
         width: 12%;
     }
+
     .news-all h3 {
         margin-left: 8%;
         font-size: 18px;
     }
+
     .news-all p {
         font-size: 14px;
     }
+
     .because {
         font-size: 24px;
     }
-    .box3{
+
+    .box3 {
         background-repeat: repeat;
     }
+
     .images {
         flex-direction: column;
     }
+
     .images div {
         padding-top: 10%;
         max-width: 95%;
         margin: 3% auto;
     }
-    .images div img{
+
+    .images div img {
         border-radius: 30px
     }
+
     .images div h2 {
         font-size: 14px;
     }
+
     .images div p {
         font-size: 15px;
     }
-    .logo-end{
+
+    .logo-end {
         margin-left: 16%;
         width: 60%
     }
-    .address-p{
+
+    .address-p {
         width: 80%;
         font-size: 16px;
         box-shadow: 0px 0px 10px 10px black
     }
-    .address-button{
+
+    .address-button {
         font-size: 16px;
         box-shadow: 0px 0px 10px 10px black
     }
-    .e-mail-button{
+
+    .e-mail-button {
         font-size: 16px;
         box-shadow: 0px 0px 10px 10px black
     }
-    .logo-end .logotip2{
+
+    .logo-end .logotip2 {
         height: auto;
         width: 25%;
         border-top-left-radius: 15px
     }
+
     .follow {
         flex-direction: column;
         width: 95%;
         background: none;
-        box-shadow: 0px 0px 0px 0px ;
+        box-shadow: 0px 0px 0px 0px;
         display: flex
     }
+
     .follow input {
         width: 95%;
         padding-left: 2%;
@@ -942,6 +1113,7 @@ body{
         font-size: 13px;
         margin-bottom: 2%;
     }
+
     .follow button {
         border-radius: 10px;
         margin-left: 60%;
@@ -950,12 +1122,11 @@ body{
         box-shadow: 0px 0px 10px 10px black;
         height: 6vh;
     }
-    .designed-by{
+
+    .designed-by {
         width: 95%;
         margin-left: 1%;
         font-size: 12px;
         box-shadow: 0px 0px 10px 10px black
     }
 }
-
-    
