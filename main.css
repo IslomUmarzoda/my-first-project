@@ -5,11 +5,22 @@
 
 body {
     background-color: grey;
-    background-image: url("background-image-1.webp");
+
+    /* background-image: url("background-image-1.webp");
     background-repeat: no-repeat;
     background-position: top;
-    background-size: 100% auto;
+    background-size: 100% auto; */
 }
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
 
 .first-part {
     width: 100%;
